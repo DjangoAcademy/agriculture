@@ -293,16 +293,15 @@
                                 <h2 class="title">Recent post</h2>
                             </div>
                             <div class="recent-post_bottom">
-
-                                <div class="mini-post_block">
-                                    {% for relarticle in articles %}
+                                {% for relarticle in articles|slice:5 %}
+                                    <div class="mini-post_block">
                                         <div class="mini-post_img"><a href="{{ relarticle.get_absolute_url }}"><img
                                                 src="{{ relarticle.thumbnail.url }}" alt="blog image"></a></div>
                                         <div class="mini-post_text"><a href="{{ relarticle.get_absolute_url }}">{{ relarticle.title|truncatechars:20 }}</a>
                                             <h5>{{ relarticle.publish_date }}</h5>
                                         </div>
-                                    {% endfor %}
-                                </div>
+                                    </div>
+                                {% endfor %}
 
                             </div>
                         </div>
