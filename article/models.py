@@ -70,6 +70,7 @@ class Category(models.Model):
 class Article(models.Model):
     title = models.CharField(max_length=50, blank=False)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=False)
+    tags = models.ManyToManyField(Tag, blank=False)
     thumbnail = models.ImageField(blank=False, upload_to='article/thumbnails')
     content = models.TextField(blank=False)
     slug = models.SlugField(unique=True, max_length=60, editable=False)

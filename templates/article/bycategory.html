@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Aqrar</title>
+    <title>Index</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <meta name="keywords"
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{% static 'assets/css/jquery.fancybox.min.css' %}">
     <link rel="shortcut icon" href="{% static 'assets/images/shortcut_logo.png' %}">
 </head>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <body>
 <div id="main">
     <header>
@@ -28,9 +29,9 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <div class="header-left d-flex flex-column flex-md-row align-items-center">
-                            <p class="d-flex align-items-center"><i class="fas fa-envelope"></i>info@agriculture.az
+                            <p class="d-flex align-items-center"><i class="fas fa-envelope"></i>info.deercreative@gmail.com
                             </p>
-                            <p class="d-flex align-items-center"><i class="fas fa-phone"></i>+994 70 868 67 99</p>
+                            <p class="d-flex align-items-center"><i class="fas fa-phone"></i>+65 11.188.888</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
@@ -38,21 +39,17 @@
                             <div class="social-link d-flex"><a href=""><i class="fab fa-facebook-f"> </i></a><a href=""><i
                                     class="fab fa-twitter"></i></a><a href=""><i class="fab fa-invision"> </i></a><a
                                     href=""><i class="fab fa-pinterest-p"> </i></a></div>
-                            <!--
                             <div class="language">
-                                <div class="selected-language"><img
-                                        src="{% static 'assets/images/homepage01/usa.jpg' %}" alt="">English<i
+                                <div class="selected-language"><img src="assets/images/homepage01/usa.jpg" alt="">English<i
                                         class="arrow_carrot-down"></i>
                                     <ul class="list-language">
-                                        <li><img src="{% static 'assets/images/homepage01/usa.jpg' %}" alt="">English
-                                        </li>
-                                        <li><img src="{% static 'assets/images/homepage01/usa.jpg' %}" alt="">Spain</li>
-                                        <li><img src="{% static 'assets/images/homepage01/usa.jpg' %}" alt="">Japan</li>
+                                        <li><img src="assets/images/homepage01/usa.jpg" alt="">English</li>
+                                        <li><img src="assets/images/homepage01/usa.jpg" alt="">Spain</li>
+                                        <li><img src="assets/images/homepage01/usa.jpg" alt="">Japan</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="login d-flex"><a href="login.html"><i class="fas fa-user"></i>Login</a></div>
-                            -->
                         </div>
                     </div>
                 </div>
@@ -61,14 +58,20 @@
         <nav class="navigation d-flex align-items-center">
             <div class="container">
                 <div class="row">
-                    <div class="col-2"><a class="logo" href="{% url 'home' %}"><img
-                            src="{% static 'assets/images/logo.png' %}" alt=""></a></div>
+                    <div class="col-2"><a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""></a>
+                    </div>
                     <div class="col-8">
                         <div class="navgition-menu d-flex align-items-center justify-content-center">
                             <ul class="mb-0">
-                                <li class="toggleable"><a class="menu-item active" href="{% url 'home' %}">Ana
-                                    Səhifə</a></li>
-
+                                <li class="toggleable"><a class="menu-item" href="index.html">Home</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html">Homepage 1</a></li>
+                                        <li><a href="homepage02.html">Homepage 2</a></li>
+                                        <li><a href="homepage03.html">Homepage 3</a></li>
+                                        <li><a href="homepage04.html">Homepage 4</a></li>
+                                        <li><a href="homepage05.html">Homepage 5</a></li>
+                                    </ul>
+                                </li>
                                 <li class="toggleable"><a class="menu-item" href="shop_grid+list_3col.html">Shop</a>
                                     <ul class="sub-menu shop d-flex">
                                         <div class="nav-column">
@@ -93,7 +96,8 @@
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="toggleable"><a class="menu-item" href="blog_list_sidebar.html">Blog</a>
+                                <li class="toggleable"><a class="menu-item active"
+                                                          href="blog_list_sidebar.html">Blog</a>
                                     <ul class="sub-menu">
                                         <li><a href="blog_list_sidebar.html">Blog List Sidebar</a></li>
                                         <li><a href="blog_grid_2col.html">Blog Grid 2 column</a></li>
@@ -103,19 +107,26 @@
                                         <li><a href="blog_detail_sidebar.html">Blog detail sidebar</a></li>
                                     </ul>
                                 </li>
-                                <li class="toggleable"><a class="menu-item" href="{% url 'contact' %}">Əlaqə</a></li>
+                                <li class="toggleable"><a class="menu-item" href="#">Pages</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="login.html">login</a></li>
+                                        <li><a href="register.html">register</a></li>
+                                        <li><a href="FAQ.html">FAQ</a></li>
+                                        <li><a href="coming_soon.html">coming soon</a></li>
+                                        <li><a href="contact_us.html">contact us</a></li>
+                                        <li><a href="404_error.html">404 error</a></li>
+                                    </ul>
+                                </li>
                                 <li class="toggleable"><a class="menu-item" href="about_us.html">About us</a></li>
                             </ul>
                         </div>
                     </div>
-                    <!--
                     <div class="col-2">
                         <div class="product-function d-flex align-items-center justify-content-end">
                             <div id="wishlist"><a class="function-icon icon_heart_alt" href=""></a></div>
                             <div id="cart"><a class="function-icon icon_bag_alt" href=""><span>$150.00</span></a></div>
                         </div>
                     </div>
-                    -->
                 </div>
             </div>
         </nav>
@@ -126,12 +137,22 @@
                         <div class="mobile-menu_block d-flex align-items-center"><a class="mobile-menu--control"
                                                                                     href="#"><i class="fas fa-bars"></i></a>
                             <div id="ogami-mobile-menu">
-                                <button class="no-round-btn" id="mobile-menu--closebtn">Bağla</button>
+                                <button class="no-round-btn" id="mobile-menu--closebtn">Close menu</button>
                                 <div class="mobile-menu_items">
                                     <ul class="mb-0 d-flex flex-column">
-                                        <li class="toggleable"><a class="menu-item active" href="{% url 'home' %}">Ana Səhifə</a>
+                                        <li class="toggleable"><a class="menu-item active"
+                                                                  href="index.html">Home</a><span
+                                                class="sub-menu--expander"><i class="icon_plus"></i></span>
+                                            <ul class="sub-menu">
+                                                <li><a href="index.html">Homepage 1</a></li>
+                                                <li><a href="homepage02.html">Homepage 2</a></li>
+                                                <li><a href="homepage03.html">Homepage 3</a></li>
+                                                <li><a href="homepage04.html">Homepage 4</a></li>
+                                                <li><a href="homepage05.html">Homepage 5</a></li>
+                                            </ul>
                                         </li>
-                                        <li class="toggleable"><a class="menu-item" href="shop_grid+list_3col.html">Shop</a><span
+                                        <li class="toggleable"><a class="menu-item"
+                                                                  href="shop_grid+list_3col.html">Shop</a><span
                                                 class="sub-menu--expander"><i class="icon_plus"></i></span>
                                             <ul class="sub-menu">
                                                 <li><a href="shop_grid+list_fullwidth.html">Shop grid fullwidth</a></li>
@@ -187,7 +208,7 @@
                     </div>
                     <div class="col-6">
                         <div class="mobile-menu_logo text-center d-flex justify-content-center align-items-center"><a
-                                href=""><img src="{% static 'assets/images/logo.png' %}" alt=""></a></div>
+                                href=""><img src="assets/images/logo.png" alt=""></a></div>
                     </div>
                     <div class="col-3">
                         <div class="mobile-product_function d-flex align-items-center justify-content-end"><a
@@ -203,13 +224,24 @@
                     <div class="col-12 col-md-4 col-lg-4 col-xl-3 order-2 order-md-1">
                         <div class="department-menu_block">
                             <div class="department-menu d-flex justify-content-between align-items-center"><i
-                                    class="fas fa-bars"></i>Kateqoriyalar<span><i
+                                    class="fas fa-bars"></i>All departments<span><i
                                     class="arrow_carrot-down"></i></span></div>
                             <div class="department-dropdown-menu">
                                 <ul>
-                                    {% for category in categories %}
-                                        <li><a href="shop_grid+list_3col.html"> <i class="icon-1"></i>{{ category.name }}</a></li>
-                                    {% endfor %}
+                                    <li><a href="shop_grid+list_3col.html"> <i class="icon-1"></i>Fresh Meat</a></li>
+                                    <li><a href="shop_grid+list_3col.html"> <i class="icon-2"></i>Vegetables</a></li>
+                                    <li><a href="shop_grid+list_3col.html"> <i class="icon-3"></i>Fruit & Nut Gifts</a>
+                                    </li>
+                                    <li><a href="shop_grid+list_3col.html"> <i class="icon-4"></i>Fresh Berries</a></li>
+                                    <li><a href="shop_grid+list_3col.html"> <i class="icon-5"></i>Ocean Foods</a></li>
+                                    <li><a href="shop_grid+list_3col.html"><i class="icon-6"></i>Butter & Eggs</a></li>
+                                    <li><a href="shop_grid+list_3col.html"><i class="icon-7"></i>Fastfood</a></li>
+                                    <li><a href="shop_grid+list_3col.html"> <i class="icon-8"></i>Fresh Onion</a></li>
+                                    <li><a href="shop_grid+list_3col.html"> <i class="icon-9"></i>Papayaya & Crisps</a>
+                                    </li>
+                                    <li><a href="shop_grid+list_3col.html"><i class="icon-10"></i>Oatmeal</a></li>
+                                    <li><a href="shop_grid+list_3col.html"> <i class="icon-11"></i>Fresh Bananas</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -218,16 +250,28 @@
                         <div class="website-search">
                             <div class="row no-gutters">
                                 <div class="col-0 col-md-0 col-lg-4 col-xl-3">
-
+                                    <div class="filter-search">
+                                        <div class="categories-select d-flex align-items-center justify-content-around">
+                                            <span>All Categories</span><i class="arrow_carrot-down"></i></div>
+                                        <div class="categories-select_box">
+                                            <ul>
+                                                <li>Fruit & Nut Gifts</li>
+                                                <li>Fresh Berries</li>
+                                                <li>Ocean Foods</li>
+                                                <li>Butter & Eggs</li>
+                                                <li>Ocean Foods</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-8 col-md-8 col-lg-5 col-xl-10">
+                                <div class="col-8 col-md-8 col-lg-5 col-xl-7">
                                     <div class="search-input">
                                         <input class="no-round-input no-border" type="text"
-                                               placeholder="Hansı mövzuda məlumat lazımdır?">
+                                               placeholder="What do you need">
                                     </div>
                                 </div>
                                 <div class="col-4 col-md-4 col-lg-3 col-xl-2">
-                                    <button class="no-round-btn">Axtarış</button>
+                                    <button class="no-round-btn">Search</button>
                                 </div>
                             </div>
                         </div>
@@ -237,15 +281,15 @@
         </div>
     </header>
     <!-- End header-->
-
     <div class="ogami-breadcrumb">
         <div class="container">
             <ul>
-
+                <li><a class="breadcrumb-link" href="index.html"> <i class="fas fa-home"></i>Home</a></li>
+                <li><a class="breadcrumb-link active" href="#">Blog grid sidebar</a></li>
             </ul>
         </div>
     </div>
-
+    <!-- End breadcrumb-->
     <div class="blog-layout">
         <div class="container">
             <div class="row">
@@ -261,70 +305,107 @@
                                         <div class="blog-img"><a href="{{ article.get_absolute_url }}"><img
                                                 src="{{ article.thumbnail.url }}" alt="blog image"></a></div>
                                         <div class="blog-text">
-                                            <h5 class="blog-tag">{{ article.category }}</h5><br><a class="blog-title" href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+                                            <h5 class="blog-tag">Green</h5><a class="blog-title" href="{{ article.get_absolute_url }}">{{ article.title }}</a>
                                             <div class="blog-credit">
                                                 <p class="credit date">{{ article.publish_date }}</p>
-                                                <p class="credit comment"><i class="fas fa-eye"></i> {{ article.viewscounter }}</p>
+                                                <p class="credit comment"></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             {% endfor %}
-
                         </div>
                     </div>
                     <div class="blog-pagination">
                         <ul>
-
-                            {% for page in articles.paginator.page_range %}
-                                <li>
-                                    <button class="no-round-btn smooth" onclick="location.href='?page={{ page }}'">{{ page }}</button>
-                                </li>
-
-                            {% endfor %}
-                            {% if articles.has_next %}
-                                <li>
-                                    <button class="no-round-btn smooth" onclick="location.href='?page={{ articles.next_page_number }}'">{{ page }} <i class="arrow_carrot-2right"></i></button>
-                                </li>
-                            {% endif %}
+                            <li>
+                                <button class="no-round-btn smooth active">1</button>
+                            </li>
+                            <li>
+                                <button class="no-round-btn smooth">2</button>
+                            </li>
+                            <li>
+                                <button class="no-round-btn smooth">3</button>
+                            </li>
+                            <li>
+                                <button class="no-round-btn smooth"><i class="arrow_carrot-2right"></i></button>
+                            </li>
                         </ul>
-
-
                     </div>
                 </div>
                 <div class="col-xl-3">
                     <div class="blog-sidebar">
                         <button class="no-round-btn" id="filter-sidebar--closebtn">Close sidebar</button>
-
-
+                        <div class="blog-sidebar_search">
+                            <div class="search_block">
+                                <form action="" method="get">
+                                    <input class="no-round-input" type="text" placeholder="Search...">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="blog-sidebar_categories">
+                            <div class="categories_top mini-tab-title underline">
+                                <h2 class="title">Categories</h2>
+                            </div>
+                            <div class="categories_bottom">
+                                <ul>
+                                    <li><a class="category-link" href="shop_grid+list_3col.html">Image</a></li>
+                                    <li><a class="category-link" href="shop_grid+list_3col.html">Nutrition Meal</a></li>
+                                    <li><a class="category-link" href="shop_grid+list_3col.html">Organic Planting</a>
+                                    </li>
+                                    <li><a class="category-link" href="shop_grid+list_3col.html">Recipes</a></li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="blog-sidebar_recent-post">
                             <div class="recent-post_top mini-tab-title underline">
-                                <h2 class="title">Çox oxunanlar</h2>
+                                <h2 class="title">Recent post</h2>
                             </div>
                             <div class="recent-post_bottom">
-                                {% for article in mostviewed|slice:3 %}
-                                    <div class="mini-post_block">
-                                        <div class="mini-post_img"><a href="{{ article.get_absolute_url }}"><img
-                                                src="{{ article.thumbnail.url }}" alt="blog image"></a></div>
-                                        <div class="mini-post_text"><a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
-                                            <h5>{{ article.publish_date }}</h5>
-                                        </div>
+                                <div class="mini-post_block">
+                                    <div class="mini-post_img"><a href="blog_detail_sidebar.html"><img
+                                            src="assets/images/blog/mini_blog_img_1.png" alt="blog image"></a></div>
+                                    <div class="mini-post_text"><a href="blog_detail_sidebar.html">Cook Dinner For 30
+                                        Minutes</a>
+                                        <h5>January 23, 2019</h5>
                                     </div>
-                                {% endfor %}
+                                </div>
+                                <div class="mini-post_block">
+                                    <div class="mini-post_img"><a href="blog_detail_sidebar.html"><img
+                                            src="assets/images/blog/mini_blog_img_2.png" alt="blog image"></a></div>
+                                    <div class="mini-post_text"><a href="blog_detail_sidebar.html">Tips for Growing your
+                                        own Organic</a>
+                                        <h5>January 23, 2019</h5>
+                                    </div>
+                                </div>
+                                <div class="mini-post_block">
+                                    <div class="mini-post_img"><a href="blog_detail_sidebar.html"><img
+                                            src="assets/images/blog/mini_blog_img_3.png" alt="blog image"></a></div>
+                                    <div class="mini-post_text"><a href="blog_detail_sidebar.html">The Personality Trait
+                                        That Makes..</a>
+                                        <h5>January 23, 2019</h5>
+                                    </div>
+                                </div>
+                                <div class="mini-post_block">
+                                    <div class="mini-post_img"><a href="blog_detail_sidebar.html"><img
+                                            src="assets/images/blog/mini_blog_img_4.png" alt="blog image"></a></div>
+                                    <div class="mini-post_text"><a href="blog_detail_sidebar.html">The Personality Trait
+                                        That Makes People</a>
+                                        <h5>January 23, 2019</h5>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="blog-sidebar_tags">
                             <div class="tags_top mini-tab-title underline">
                                 <h2 class="title">Search By Tags</h2>
                             </div>
-
-                            <div class="tags_bottom">
-                                {% for tag in tags %}
-                                    <a class="tag-btn" href="shop_grid+list_3col.html">{{ tag.name }}</a>
-
-                                {% endfor %}
-                            </div>
-
+                            <div class="tags_bottom"><a class="tag-btn" href="shop_grid+list_3col.html">organic</a><a
+                                    class="tag-btn" href="shop_grid+list_3col.html">vegatable</a><a class="tag-btn"
+                                                                                                    href="shop_grid+list_3col.html">fruits</a><a
+                                    class="tag-btn" href="shop_grid+list_3col.html">fresh meat</a><a class="tag-btn"
+                                                                                                     href="shop_grid+list_3col.html">fastfood</a><a
+                                    class="tag-btn" href="shop_grid+list_3col.html">natural</a></div>
                         </div>
                     </div>
                     <div class="filter-sidebar--background" style="display: none"></div>
@@ -332,135 +413,24 @@
             </div>
         </div>
     </div>
-    <!--
-    <div class="banner">
-        <div class="full-fluid">
-            <div class="banner-block">
-                <div class="row no-gutters">
-
-                    <div class="col-12 col-lg-3">
-                        <div class="banner-block_detail"
-                             style="background-image: url('{% static 'assets/images/homepage01/banner_1.png' %}')"><img
-                                src="{% static 'assets/images/homepage01/banner_img_1.png' %}" alt=""><a class="banner-btn normal-btn" href="shop_grid+list_3col.html">Shop
-                            now</a></div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="banner-block_detail"
-                             style="background-image: url('{% static 'assets/images/homepage01/banner_2.png' %}')"><img
-                                src="{% static 'assets/images/homepage01/banner_img_2.png' %}" alt=""><a class="banner-btn normal-btn" href="shop_grid+list_3col.html">Shop
-                            now</a></div>
-                    </div>
-                    <div class="col-12 col-lg-3">
-                        <div class="banner-block_detail"
-                             style="background-image: url('{% static 'assets/images/homepage01/banner_3.png' %}')"><img
-                                src="{% static 'assets/images/homepage01/banner_img_3.png' %}" alt=""><a class="banner-btn normal-btn" href="shop_grid+list_3col.html">Shop
-                            now</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-    <!-- End banner	-->
-    <!--
-    <div class="deal-of-week">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center order-1">
-                    <h1 class="title green-underline mx-auto">Deal Of The Week</h1>
-                </div>
-                <div class="col-10 col-md-6 col-lg-4 order-3 order-md-2 order-lg-2">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="featured-use text-md-right">
-                                <div class="featured-use_intro order-2 order-md-1">
-                                    <h5>Eat Healthier</h5>
-                                    <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
-                                </div>
-                                <div class="featured-use_icon text-md-right order-1 order-md-2 featured-use_icon-left">
-                                    <div class="icon-detail"><img src="{% static 'assets/images/homepage01/dow_icon_1.png' %}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="featured-use text-md-right">
-                                <div class="featured-use_intro order-2 order-md-1">
-                                    <h5>We Have Brands</h5>
-                                    <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
-                                </div>
-                                <div class="featured-use_icon text-md-right order-1 order-md-2 featured-use_icon-left">
-                                    <div class="icon-detail"><img src="{% static 'assets/images/homepage01/dow_icon_2.png' %}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-4 order-2 order-md-4 order-lg-3 text-center">
-                    <div class="week-product_img"><img class="img-fluid" src="{% static 'assets/images/homepage01/deal-of-week.png' %}"
-                                                       alt="">
-                        <p>Only<br><span>$19.00</span></p>
-                    </div>
-                </div>
-                <div class="col-10 col-md-6 col-lg-4 order-4 order-md-3 order-lg-4">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="featured-use">
-                                <div class="featured-use_intro order-2">
-                                    <h5>Fresh And Clean Products</h5>
-                                    <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
-                                </div>
-                                <div class="featured-use_icon order-1 ml-0">
-                                    <div class="icon-detail"><img src="{% static 'assets/images/homepage01/dow_icon_3.png' %}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="featured-use">
-                                <div class="featured-use_intro order-2">
-                                    <h5>Modern Process</h5>
-                                    <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
-                                </div>
-                                <div class="featured-use_icon order-1 ml-0">
-                                    <div class="icon-detail"><img src="{% static 'assets/images/homepage01/dow_icon_4.png' %}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 text-center order-5">
-                    <div class="d-flex justify-content-center" id="event-countdown"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-    <!-- End deak of the week-->
+    <!-- End blog layout-->
     <div class="partner">
         <div class="container">
             <div class="partner_block d-flex justify-content-between" data-slick="{&quot;slidesToShow&quot;: 6}">
-                <div class="partner--logo" href=""><a href="#"><img
-                        src="{% static 'assets/images/partner/partner_01.png' %}"
-                        alt="partner logo"></a></div>
-                <div class="partner--logo" href=""><a href="#"><img
-                        src="{% static 'assets/images/partner/partner_02.png' %}"
-                        alt="partner logo"></a></div>
-                <div class="partner--logo" href=""><a href="#"><img
-                        src="{% static 'assets/images/partner/partner_01.png' %}"
-                        alt="partner logo"></a></div>
-                <div class="partner--logo" href=""><a href="#"><img
-                        src="{% static 'assets/images/partner/partner_02.png' %}"
-                        alt="partner logo"></a></div>
-                <div class="partner--logo" href=""><a href="#"><img
-                        src="{% static 'assets/images/partner/partner_01.png' %}"
-                        alt="partner logo"></a></div>
-                <div class="partner--logo" href=""><a href="#"><img
-                        src="{% static 'assets/images/partner/partner_02.png' %}" alt="partner logo"></a></div>
-                <div class="partner--logo" href=""><a href=""><img
-                        src="{% static 'assets/images/partner/partner_01.png' %}" alt="partner logo"></a></div>
+                <div class="partner--logo" href=""><a href="#"><img src="assets/images/partner/partner_01.png"
+                                                                    alt="partner logo"></a></div>
+                <div class="partner--logo" href=""><a href="#"><img src="assets/images/partner/partner_02.png"
+                                                                    alt="partner logo"></a></div>
+                <div class="partner--logo" href=""><a href="#"><img src="assets/images/partner/partner_01.png"
+                                                                    alt="partner logo"></a></div>
+                <div class="partner--logo" href=""><a href="#"><img src="assets/images/partner/partner_02.png"
+                                                                    alt="partner logo"></a></div>
+                <div class="partner--logo" href=""><a href="#"><img src="assets/images/partner/partner_01.png"
+                                                                    alt="partner logo"></a></div>
+                <div class="partner--logo" href=""><a href="#"><img src="assets/images/partner/partner_02.png"
+                                                                    alt="partner logo"></a></div>
+                <div class="partner--logo" href=""><a href=""><img src="assets/images/partner/partner_01.png"
+                                                                   alt="partner logo"></a></div>
             </div>
         </div>
     </div>
@@ -469,11 +439,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-4 text-sm-center text-md-left">
-                    <div class="footer-logo"><img src="{% static 'assets/images/logo.png' %}" alt=""></div>
+                    <div class="footer-logo"><img src="assets/images/logo.png" alt=""></div>
                     <div class="footer-contact">
-
-                        <p>+994 70 868 67 99</p>
-                        <p>info@agriculture.az</p>
+                        <p>Address: 60-49 Road 11378 New York</p>
+                        <p>Phone: +65 11.188.888</p>
+                        <p>Email: info.deercreative@gmail.com</p>
                     </div>
                     <div class="footer-social"><a class="round-icon-btn" href=""><i
                             class="fab fa-facebook-f"> </i></a><a class="round-icon-btn" href=""><i
@@ -526,8 +496,8 @@
         <div class="footer-credit">
             <div class="container">
                 <div class="footer-creadit_block d-flex flex-column flex-md-row justify-content-start justify-content-md-between align-items-baseline align-items-md-center">
-                    <p class="author">Copyright © 2019 Agricultur.az - Bütün hüquqları qorunur.</p><img class="payment-method"
-                                                                                            src="{% static 'assets/images/payment.png' %}"
+                    <p class="author">Copyright © 2019 Ogami - All Rights Reserved.</p><img class="payment-method"
+                                                                                            src="assets/images/payment.png"
                                                                                             alt="">
                 </div>
             </div>
@@ -547,11 +517,5 @@
 <script src="{% static 'assets/js/numscroller-1.0.js' %}"></script>
 <script src="{% static 'assets/js/vanilla-tilt.min.js' %}"></script>
 <script src="{% static 'assets/js/main.js' %}"></script>
-<script>
-    var sence = document.getElementById('img-block')
-    var parallaxInstance = new Parallax(sence, {
-        hoverOnly: true,
-    });
-</script>
 </body>
 </html>
