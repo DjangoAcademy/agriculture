@@ -39,6 +39,7 @@
                             <div class="social-link d-flex"><a href=""><i class="fab fa-facebook-f"> </i></a><a href=""><i
                                     class="fab fa-twitter"></i></a><a href=""><i class="fab fa-invision"> </i></a><a
                                     href=""><i class="fab fa-pinterest-p"> </i></a></div>
+                            <!--
                             <div class="language">
                                 <div class="selected-language"><img
                                         src="{% static 'assets/images/homepage01/usa.jpg' %}" alt="">English<i
@@ -52,6 +53,7 @@
                                 </div>
                             </div>
                             <div class="login d-flex"><a href="login.html"><i class="fas fa-user"></i>Login</a></div>
+                            -->
                         </div>
                     </div>
                 </div>
@@ -67,40 +69,7 @@
                             <ul class="mb-0">
                                 <li class="toggleable"><a class="menu-item" href="{% url 'home' %}">Ana Səhifə</a>
                                 </li>
-                                <li class="toggleable"><a class="menu-item" href="shop_grid+list_3col.html">Shop</a>
-                                    <ul class="sub-menu shop d-flex">
-                                        <div class="nav-column">
-                                            <h2>Layout shop</h2>
-                                            <li><a href="shop_grid+list_fullwidth.html">Shop grid fullwidth</a></li>
-                                            <li><a href="shop_grid+list_fullwidth.html">Shop list fullwidth</a></li>
-                                            <li><a href="shop_grid+list_3col.html">shop grid 3 column</a></li>
-                                            <li><a href="shop_grid+list_3col.html">shop list 3 column</a></li>
-                                        </div>
-                                        <div class="nav-column">
-                                            <h2>Detail shop</h2>
-                                            <li><a href="shop_detail_fullwidth.html">shop detail fullwidth</a></li>
-                                            <li><a href="shop_detail.html">shop detail sidebar</a></li>
-                                        </div>
-                                        <div class="nav-column">
-                                            <h2>Pages shop</h2>
-                                            <li><a href="shop_checkout.html">checkout</a></li>
-                                            <li><a href="shop_order_complete.html">order complete</a></li>
-                                            <li><a href="shop_wishlist.html">wishlist</a></li>
-                                            <li><a href="shop_compare.html">compare</a></li>
-                                            <li><a href="shop_cart.html">cart</a></li>
-                                        </div>
-                                    </ul>
-                                </li>
-                                <li class="toggleable"><a class="menu-item" href="blog_list_sidebar.html">Blog</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog_list_sidebar.html">Blog List Sidebar</a></li>
-                                        <li><a href="blog_grid_2col.html">Blog Grid 2 column</a></li>
-                                        <li><a href="blog_grid_sidebar.html">Blog Grid sidebar</a></li>
-                                        <li><a href="blog_masonry.html">Blog masonry</a></li>
-                                        <li><a href="blog_grid_1col.html">Blog Grid 1 column sidebar</a></li>
-                                        <li><a href="blog_detail_sidebar.html">Blog detail sidebar</a></li>
-                                    </ul>
-                                </li>
+
                                 <li class="toggleable"><a class="menu-item" href="{% url 'contact' %}">Əlaqə</a>
                                 </li>
                                 <li class="toggleable"><a class="menu-item" href="about_us.html">About us</a></li>
@@ -125,48 +94,24 @@
                         <div class="mobile-menu_block d-flex align-items-center"><a class="mobile-menu--control"
                                                                                     href="#"><i class="fas fa-bars"></i></a>
                             <div id="ogami-mobile-menu">
-                                <button class="no-round-btn" id="mobile-menu--closebtn">Close menu</button>
+                                <button class="no-round-btn" id="mobile-menu--closebtn">Bağla</button>
                                 <div class="mobile-menu_items">
                                     <ul class="mb-0 d-flex flex-column">
                                         <li class="toggleable"><a class="menu-item" href="{% url 'home' %}">Ana Səhifə</a>
                                         </li>
-                                        <li class="toggleable"><a class="menu-item" href="shop_grid+list_3col.html">Shop</a><span
-                                                class="sub-menu--expander"></span>
-                                            <ul class="sub-menu">
-                                                <li><a href="shop_grid+list_fullwidth.html">Shop grid fullwidth</a></li>
-                                                <li><a href="shop_grid+list_fullwidth.html">Shop list fullwidth</a></li>
-                                                <li><a href="shop_grid+list_3col.html">shop grid 3 column</a></li>
-                                                <li><a href="shop_grid+list_3col.html">shop list 3 column</a></li>
-                                                <li><a href="shop_detail.html">shop detail</a></li>
-                                                <li><a href="shop_detail_fullwidth.html">shop detail fullwidth</a></li>
-                                                <li><a href="shop_checkout.html">checkout</a></li>
-                                                <li><a href="shop_order_complete.html">order complete</a></li>
-                                                <li><a href="shop_wishlist.html">wishlist</a></li>
-                                                <li><a href="shop_compare.html">compare</a></li>
-                                                <li><a href="shop_cart.html">cart</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="toggleable"><a class="menu-item"
-                                                                  href="blog_list_sidebar.html">Blog</a><span
-                                                class="sub-menu--expander"></span>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog_list_sidebar.html">Blog List Sidebar</a></li>
-                                                <li><a href="blog_grid_2col.html">Blog Grid 2 column</a></li>
-                                                <li><a href="blog_grid_sidebar.html">Blog Grid sidebar</a></li>
-                                                <li><a href="blog_masonry.html">Blog masonry</a></li>
-                                                <li><a href="blog_grid_1col.html">Blog Grid 1 column sidebar</a></li>
-                                                <li><a href="blog_detail_sidebar.html">Blog detail sidebar</a></li>
-                                            </ul>
-                                        </li>
+
+
                                         <li class="toggleable"><a class="menu-item active" href="{% url 'contact' %}">Əlaqə</a>
 
                                         </li>
                                     </ul>
                                 </div>
+                                <!--
                                 <div class="mobile-login">
                                     <h2>My account</h2><a href="login.html">Login</a><a
                                         href="register.html">Register</a>
                                 </div>
+                                -->
                                 <div class="mobile-social"><a href=""><i class="fab fa-facebook-f"> </i></a><a
                                         href=""><i class="fab fa-twitter"></i></a><a href=""><i
                                         class="fab fa-invision"> </i></a><a href=""><i class="fab fa-pinterest-p"> </i></a>
@@ -195,24 +140,14 @@
                     <div class="col-12 col-md-4 col-lg-4 col-xl-3 order-2 order-md-1">
                         <div class="department-menu_block">
                             <div class="department-menu d-flex justify-content-between align-items-center"><i
-                                    class="fas fa-bars"></i>All departments<span><i
+                                    class="fas fa-bars"></i>Kateqoriyalar<span><i
                                     class="arrow_carrot-down"></i></span></div>
                             <div class="department-dropdown-menu">
                                 <ul>
-                                    <li><a href="shop_grid+list_3col.html"> <i class="icon-1"></i>Fresh Meat</a></li>
-                                    <li><a href="shop_grid+list_3col.html"> <i class="icon-2"></i>Vegetables</a></li>
-                                    <li><a href="shop_grid+list_3col.html"> <i class="icon-3"></i>Fruit & Nut Gifts</a>
-                                    </li>
-                                    <li><a href="shop_grid+list_3col.html"> <i class="icon-4"></i>Fresh Berries</a></li>
-                                    <li><a href="shop_grid+list_3col.html"> <i class="icon-5"></i>Ocean Foods</a></li>
-                                    <li><a href="shop_grid+list_3col.html"><i class="icon-6"></i>Butter & Eggs</a></li>
-                                    <li><a href="shop_grid+list_3col.html"><i class="icon-7"></i>Fastfood</a></li>
-                                    <li><a href="shop_grid+list_3col.html"> <i class="icon-8"></i>Fresh Onion</a></li>
-                                    <li><a href="shop_grid+list_3col.html"> <i class="icon-9"></i>Papayaya & Crisps</a>
-                                    </li>
-                                    <li><a href="shop_grid+list_3col.html"><i class="icon-10"></i>Oatmeal</a></li>
-                                    <li><a href="shop_grid+list_3col.html"> <i class="icon-11"></i>Fresh Bananas</a>
-                                    </li>
+                                    {% for category in categories %}
+                                        <li><a href="{{ category.get_absolute_url }}"> <i
+                                                class="icon-1"></i>{{ category.name }}</a></li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </div>
@@ -221,28 +156,16 @@
                         <div class="website-search">
                             <div class="row no-gutters">
                                 <div class="col-0 col-md-0 col-lg-4 col-xl-3">
-                                    <div class="filter-search">
-                                        <div class="categories-select d-flex align-items-center justify-content-around">
-                                            <span>All Categories</span><i class="arrow_carrot-down"></i></div>
-                                        <div class="categories-select_box">
-                                            <ul>
-                                                <li>Fruit & Nut Gifts</li>
-                                                <li>Fresh Berries</li>
-                                                <li>Ocean Foods</li>
-                                                <li>Butter & Eggs</li>
-                                                <li>Ocean Foods</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+
                                 </div>
-                                <div class="col-8 col-md-8 col-lg-5 col-xl-7">
+                                <div class="col-8 col-md-8 col-lg-5 col-xl-10">
                                     <div class="search-input">
                                         <input class="no-round-input no-border" type="text"
-                                               placeholder="What do you need">
+                                               placeholder="Hansı mövzuda məlumat lazımdır?">
                                     </div>
                                 </div>
                                 <div class="col-4 col-md-4 col-lg-3 col-xl-2">
-                                    <button class="no-round-btn">Search</button>
+                                    <button class="no-round-btn">Axtarış</button>
                                 </div>
                             </div>
                         </div>
@@ -255,8 +178,7 @@
     <div class="ogami-breadcrumb">
         <div class="container">
             <ul>
-                <li><a class="breadcrumb-link" href="{% url 'home' %}"> <i class="fas fa-home"></i>{{ article.category }}</a></li>
-                <li><a class="breadcrumb-link active" href="{% url 'contact' %}">{{ article.title }}</a></li>
+
             </ul>
         </div>
     </div>
@@ -266,39 +188,20 @@
             <div class="row">
                 <div class="col-xl-3">
                     <div class="blog-sidebar">
-                        <button class="no-round-btn" id="filter-sidebar--closebtn">Close sidebar</button>
-                        <div class="blog-sidebar_search">
-                            <div class="search_block">
-                                <form action="" method="get">
-                                    <input class="no-round-input" type="text" placeholder="Search...">
-                                </form>
-                            </div>
-                        </div>
-                        <div class="blog-sidebar_categories">
-                            <div class="categories_top mini-tab-title underline">
-                                <h2 class="title">Categories</h2>
-                            </div>
-                            <div class="categories_bottom">
-                                <ul>
-                                    <li><a class="category-link" href="shop_grid+list_3col.html">Image</a></li>
-                                    <li><a class="category-link" href="shop_grid+list_3col.html">Nutrition Meal</a></li>
-                                    <li><a class="category-link" href="shop_grid+list_3col.html">Organic Planting</a>
-                                    </li>
-                                    <li><a class="category-link" href="shop_grid+list_3col.html">Recipes</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        <button class="no-round-btn" id="filter-sidebar--closebtn">Bağla</button>
+
                         <div class="blog-sidebar_recent-post">
                             <div class="recent-post_top mini-tab-title underline">
-                                <h2 class="title">Recent post</h2>
+                                <h2 class="title">Çox oxunanlar</h2>
                             </div>
                             <div class="recent-post_bottom">
-                                {% for relarticle in articles|slice:5 %}
+                                {% for article in mostviewed|slice:3 %}
                                     <div class="mini-post_block">
-                                        <div class="mini-post_img"><a href="{{ relarticle.get_absolute_url }}"><img
-                                                src="{{ relarticle.thumbnail.url }}" alt="blog image"></a></div>
-                                        <div class="mini-post_text"><a href="{{ relarticle.get_absolute_url }}">{{ relarticle.title|truncatechars:20 }}</a>
-                                            <h5>{{ relarticle.publish_date }}</h5>
+                                        <div class="mini-post_img"><a href="{{ article.get_absolute_url }}"><img
+                                                src="{{ article.thumbnail.url }}" alt="blog image"></a></div>
+                                        <div class="mini-post_text"><a
+                                                href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+                                            <h5>{{ article.publish_date }}</h5>
                                         </div>
                                     </div>
                                 {% endfor %}
@@ -309,12 +212,14 @@
                             <div class="tags_top mini-tab-title underline">
                                 <h2 class="title">Search By Tags</h2>
                             </div>
-                            <div class="tags_bottom"><a class="tag-btn" href="shop_grid+list_3col.html">organic</a><a
-                                    class="tag-btn" href="shop_grid+list_3col.html">vegatable</a><a class="tag-btn"
-                                                                                                    href="shop_grid+list_3col.html">fruits</a><a
-                                    class="tag-btn" href="shop_grid+list_3col.html">fresh meat</a><a class="tag-btn"
-                                                                                                     href="shop_grid+list_3col.html">fastfood</a><a
-                                    class="tag-btn" href="shop_grid+list_3col.html">natural</a></div>
+
+                            <div class="tags_bottom">
+                                {% for tag in tags %}
+                                    <a class="tag-btn" href="{{ tag.get_absolute_url }}">{{ tag.name }}</a>
+
+                                {% endfor %}
+                            </div>
+
                         </div>
                     </div>
                     <div class="filter-sidebar--background" style="display: none"></div>
@@ -322,7 +227,7 @@
                 <div class="col-12 col-xl-9">
                     <div class="blog-detail">
                         <div id="show-filter-sidebar">
-                            <h5><i class="fas fa-bars"></i>Show sidebar</h5>
+                            <h5><i class="fas fa-bars"></i>Çox oxunanlar</h5>
                         </div>
                         <div class="row">
                             <div class="col-12">
@@ -331,56 +236,16 @@
                                     <div class="blog-img"><img src="{{ article.thumbnail.url }}" alt="blog image">
                                     </div>
                                     <p class="blog-describe">{{ article.content }}</p>
-                                    <!--
-                                    <p class="blog-describe">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo consequat. Duis aute irure Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                                        ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                                        occaecat cupidatat non proident, sunt in.</p>
 
-                                    <div class="blog-quote">
-                                        <q>Technology is nothing. What's important is that you have a faith in people,
-                                            that they're basically good and smart, and if you give them tools, they'll
-                                            do wonderful things with them.</q>
-                                        <p>_ Steven Jobs </p>
-                                    </div>
-                                    <h2 class="blog-subtitle">You Can Buy For Less Than A College Degree</h2>
-                                    <p class="blog-describe">Degree Dolor sit amet, consectetur adipisicing elit, sed do
-                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                        proident.</p>
-                                    <div class="blog-img"><img src="assets/images/blog/list_img_3.png" alt="blog image">
-                                    </div>
-                                    <p class="blog-describe">Aboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                        irure Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat. Duis aute irure dolor in</p>
-                                    <p class="blog-describe">Enim ad minim veniam, quis nostrud exercitation ullamco
-                                        laboris nisi ut aliquip ex ea commodo conslaboris nisi ut aliquip ex ea commodo
-                                        consequat. Duis aute irure Lorem ipsum dolor sit amet, consectetur adipisicing
-                                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                        ad minim ve niam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                        ea commodo consequat. Duis aute irure dolor in datat non proident, sunt in.
-                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                        deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
-                                        error sit volupt atem accusantium doloremque laudantium, totam rem aperiam,
-                                        eaque ipsa quae ab illo inventore veritatis dicta sunt explicabo. </p>
-                                        -->
                                 </div>
                                 <div class="blog-detail_footer">
                                     <div class="row align-items-sm-center">
                                         <div class="col-12 col-sm-6">
-                                            <div class="blog-sidebar_tags"><a class="tag-btn"
-                                                                              href="shop_grid+list_3col.html">organic</a><a
-                                                    class="tag-btn" href="shop_grid+list_3col.html">vegatable</a><a
-                                                    class="tag-btn" href="shop_grid+list_3col.html">fruits</a></div>
+                                            <div class="blog-sidebar_tags">
+                                                {% for tag in article.tags.all %}
+                                                    <a class="tag-btn" href="{{ tag.get_absolute_url }}">{{ tag.name }}</a>
+                                                {% endfor %}
+                                            </div>
                                         </div>
                                         <div class="col-12 col-sm-6 text-md-right">
                                             <div class="blog-detail_share">
@@ -494,20 +359,25 @@
     <div class="partner">
         <div class="container">
             <div class="partner_block d-flex justify-content-between" data-slick="{&quot;slidesToShow&quot;: 6}">
-                <div class="partner--logo" href=""><a href="#"><img src="{% static 'assets/images/partner/partner_01.png' %}"
-                                                                    alt="partner logo"></a></div>
-                <div class="partner--logo" href=""><a href="#"><img src="{% static 'assets/images/partner/partner_01.png' %}"
-                                                                    alt="partner logo"></a></div>
-                <div class="partner--logo" href=""><a href="#"><img src="{% static 'assets/images/partner/partner_01.png' %}"
-                                                                    alt="partner logo"></a></div>
-                <div class="partner--logo" href=""><a href="#"><img src="{% static 'assets/images/partner/partner_01.png' %}"
-                                                                    alt="partner logo"></a></div>
-                <div class="partner--logo" href=""><a href="#"><img src="{% static 'assets/images/partner/partner_01.png' %}"
-                                                                    alt="partner logo"></a></div>
-                <div class="partner--logo" href=""><a href="#"><img src="{% static 'assets/images/partner/partner_01.png' %}"
-                                                                    alt="partner logo"></a></div>
-                <div class="partner--logo" href=""><a href=""><img src="{% static 'assets/images/partner/partner_01.png' %}"
-                                                                   alt="partner logo"></a></div>
+                <div class="partner--logo" href=""><a href="#"><img
+                        src="{% static 'assets/images/partner/partner_01.png' %}"
+                        alt="partner logo"></a></div>
+                <div class="partner--logo" href=""><a href="#"><img
+                        src="{% static 'assets/images/partner/partner_02.png' %}"
+                        alt="partner logo"></a></div>
+                <div class="partner--logo" href=""><a href="#"><img
+                        src="{% static 'assets/images/partner/partner_01.png' %}"
+                        alt="partner logo"></a></div>
+                <div class="partner--logo" href=""><a href="#"><img
+                        src="{% static 'assets/images/partner/partner_02.png' %}"
+                        alt="partner logo"></a></div>
+                <div class="partner--logo" href=""><a href="#"><img
+                        src="{% static 'assets/images/partner/partner_01.png' %}"
+                        alt="partner logo"></a></div>
+                <div class="partner--logo" href=""><a href="#"><img
+                        src="{% static 'assets/images/partner/partner_02.png' %}" alt="partner logo"></a></div>
+                <div class="partner--logo" href=""><a href=""><img
+                        src="{% static 'assets/images/partner/partner_01.png' %}" alt="partner logo"></a></div>
             </div>
         </div>
     </div>
@@ -518,9 +388,9 @@
                 <div class="col-12 col-sm-12 col-md-4 text-sm-center text-md-left">
                     <div class="footer-logo"><img src="{% static 'assets/images/logo.png' %}" alt=""></div>
                     <div class="footer-contact">
-                        <p>Address: 60-49 Road 11378 New York</p>
-                        <p>Phone: +65 11.188.888</p>
-                        <p>Email: info.deercreative@gmail.com</p>
+
+                        <p>+994 70 868 67 99</p>
+                        <p>info@agriculture.az</p>
                     </div>
                     <div class="footer-social"><a class="round-icon-btn" href=""><i
                             class="fab fa-facebook-f"> </i></a><a class="round-icon-btn" href=""><i
@@ -573,9 +443,10 @@
         <div class="footer-credit">
             <div class="container">
                 <div class="footer-creadit_block d-flex flex-column flex-md-row justify-content-start justify-content-md-between align-items-baseline align-items-md-center">
-                    <p class="author">Copyright © 2019 Ogami - All Rights Reserved.</p><img class="payment-method"
-                                                                                            src="{% static 'assets/images/payment.png' %}"
-                                                                                            alt="">
+                    <p class="author">Copyright © 2019 Agricultur.az - Bütün hüquqları qorunur.</p><img
+                        class="payment-method"
+                        src="{% static 'assets/images/payment.png' %}"
+                        alt="">
                 </div>
             </div>
         </div>

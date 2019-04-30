@@ -10,6 +10,9 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('bytag', args=[str(self.slug)])
+
     def get_unique_slug(self):
         slug = slugify(self.name.replace('ı', 'i').
                        replace('ə', 'e').
@@ -42,6 +45,9 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('bycategory', args=[str(self.slug)])
 
     def get_unique_slug(self):
         slug = slugify(self.name.replace('ı', 'i').
