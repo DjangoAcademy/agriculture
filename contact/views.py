@@ -1,8 +1,11 @@
 
 from django.shortcuts import render, redirect
 from.models import Contact
+from article.models import Category
 
 def contact(request):
+
+    categories = Category.objects.all()
 
     if request.method == 'POST':
         name_form = request.POST.get('name')
@@ -14,4 +17,4 @@ def contact(request):
         return redirect('home')
 
     else:
-        return render(request, 'contact/contact.html')
+        return render(request, 'contact/contact.html', {'categories': categories})

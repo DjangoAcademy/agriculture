@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Aqrar</title>
+    <title>Haqqımızda</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <meta name="keywords"
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{% static 'assets/css/jquery.fancybox.min.css' %}">
     <link rel="shortcut icon" href="{% static 'assets/images/shortcut_logo.png' %}">
 </head>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <body>
 <div id="main">
     <header>
@@ -70,7 +71,7 @@
                                     Səhifə</a></li>
 
                                 <li class="toggleable"><a class="menu-item" href="{% url 'contact' %}">Əlaqə</a></li>
-                                <li class="toggleable"><a class="menu-item" href="{% url 'about' %}">Haqqımızda</a></li>
+                                <li class="toggleable"><a class="menu-item" href="about_us.html">Haqqımızda</a></li>
                             </ul>
                         </div>
 
@@ -100,7 +101,7 @@
                                             Səhifə</a></li>
                                         <li class="toggleable"><a class="menu-item" href="{% url 'contact' %}">Əlaqə</a>
                                         </li>
-                                        <li class="toggleable"><a class="menu-item" href="{% url 'about' %}">Haqqımızda</a>
+                                        <li class="toggleable"><a class="menu-item" href="about_us.html">Haqqımızda</a>
                                         </li>
 
                                     </ul>
@@ -178,216 +179,223 @@
         </div>
     </header>
     <!-- End header-->
-
     <div class="ogami-breadcrumb">
         <div class="container">
             <ul>
-
+                <li><a class="breadcrumb-link" href="{% url 'home' %}"> <i class="fas fa-home"></i>Ana Səhifə</a></li>
+                <li><a class="breadcrumb-link active" href="{% url 'about' %}">Haqqımızda</a></li>
             </ul>
         </div>
     </div>
-
-    <div class="blog-layout">
+    <!-- End breadcrumb-->
+    <div class="about-us">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-xl-9">
-                    <div class="blog-grid">
-                        <div id="show-filter-sidebar">
-                            <h5><i class="fas fa-bars"></i>Show sidebar</h5>
+            <div class="our-story">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="our-story_text">
+                            <h1 class="title green-underline">The Story About Us</h1>
+                            <p>Tyna Giang's integrated agro-forestry farming model is the first project in Vietnam to
+                                achieve the highest ranking in the "100 projects to combat climate change" by the
+                                Ministry of Environment, Energy and Sea. France organized in 2016 ...</p>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Neque porro
+                                quisquam est, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+                                aliquam quaerat voluptatem</p>
                         </div>
-                        <div class="row">
-                            {% for article in articles %}
-                                <div class="col-md-6">
-                                    <div class="blog-block">
-                                        <div class="blog-img"><a href="{{ article.get_absolute_url }}"><img
-                                                src="{{ article.thumbnail.url }}" alt="blog image"></a></div>
-                                        <div class="blog-text">
-                                            <h5 class="blog-tag">{{ article.category }}</h5><br><a class="blog-title"
-                                                                                                   href="{{ article.get_absolute_url }}">{{ article.title }}</a>
-                                            <div class="blog-credit">
-                                                <p class="credit date">{{ article.publish_date }}</p>
-                                                <p class="credit comment"><i
-                                                        class="fas fa-eye"></i> {{ article.viewscounter }}</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="our-story_video"><img src="{% static 'assets/images/pages/video_play.png' %}" alt="play video"><a
+                                class="play-btn" href="https://www.youtube.com/watch?v=7e90gBu4pas" target="_blank"><i
+                                class="fas fa-play"></i></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="our-number">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="our-number_block">
+                            <div class="our-number_icon"><img src="{% static 'assets/images/pages/about_us_icon_1.png' %}" alt="icon">
+                            </div>
+                            <div class="our-number_info">
+                                <h1 class="nummber-increase"><span class="numscroller" data-min="1" data-max="100"
+                                                                   data-delay="5" data-increment="10">100</span>%</h1>
+                                <p>Happy Clients</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="our-number_block">
+                            <div class="our-number_icon"><img src="{% static 'assets/images/pages/about_us_icon_2.png' %}" alt="icon">
+                            </div>
+                            <div class="our-number_info">
+                                <h1 class="nummber-increase"><span class="numscroller" data-min="1" data-max="142"
+                                                                   data-delay="5" data-increment="10">142</span></h1>
+                                <p>Our Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="our-number_block">
+                            <div class="our-number_icon"><img src="{% static 'assets/images/pages/about_us_icon_3.png' %}" alt="icon">
+                            </div>
+                            <div class="our-number_info">
+                                <h1 class="nummber-increase">+<span class="numscroller" data-min="1" data-max="16"
+                                                                    data-delay="5" data-increment="10">16</span></h1>
+                                <p>Our Farm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="full-fluid">
+            <div class="why-choose-us">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 col-md-4 align-self-end">
+                            <div class="wcu_img"><img src="{% static 'assets/images/pages/wcu_img.png' %}" alt="image"></div>
+                        </div>
+                        <div class="col-sm-10 col-md-8">
+                            <div class="wcu-wrapper">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h1 class="title green-underline">Why Choose Us</h1>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="wcu-block">
+                                                    <div class="wcu_icon">
+                                                        <div class="icon-detail"><img
+                                                                src="{% static 'assets/images/homepage01/dow_icon_1.png' %}" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="wcu_intro">
+                                                        <h5>Eat Healthier</h5>
+                                                        <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="wcu-block">
+                                                    <div class="wcu_icon">
+                                                        <div class="icon-detail"><img
+                                                                src="{% static 'assets/images/homepage01/dow_icon_2.png' %}" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="wcu_intro">
+                                                        <h5>We Have Brands</h5>
+                                                        <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="wcu-block">
+                                                    <div class="wcu_icon">
+                                                        <div class="icon-detail"><img
+                                                                src="{% static 'assets/images/homepage01/dow_icon_3.png' %}" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="wcu_intro">
+                                                        <h5>Fresh And Clean Products</h5>
+                                                        <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="wcu-block">
+                                                    <div class="wcu_icon">
+                                                        <div class="icon-detail"><img
+                                                                src="{% static 'assets/images/homepage01/dow_icon_4.png' %}" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="wcu_intro">
+                                                        <h5>Modern Process</h5>
+                                                        <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            {% endfor %}
-
-                        </div>
-                    </div>
-                    <div class="blog-pagination">
-                        <ul>
-
-                            {% for page in articles.paginator.page_range %}
-                                {% if articles.has_next or articles.has_previous %}
-                                    <li>
-                                        <button class="no-round-btn smooth"
-                                                onclick="location.href='?page={{ page }}'">{{ page }}</button>
-                                    </li>
-                                {% endif %}
-
-                            {% endfor %}
-                            {% if articles.has_next %}
-                                <li>
-                                    <button class="no-round-btn smooth"
-                                            onclick="location.href='?page={{ articles.next_page_number }}'">{{ page }}
-                                        <i class="arrow_carrot-2right"></i></button>
-                                </li>
-                            {% endif %}
-                        </ul>
-
-
-                    </div>
-                </div>
-                <div class="col-xl-3">
-                    <div class="blog-sidebar">
-                        <button class="no-round-btn" id="filter-sidebar--closebtn">Bağla</button>
-
-
-                        <div class="blog-sidebar_recent-post">
-                            <div class="recent-post_top mini-tab-title underline">
-                                <h2 class="title">Çox oxunanlar</h2>
-                            </div>
-                            <div class="recent-post_bottom">
-                                {% for article in mostviewed|slice:3 %}
-                                    <div class="mini-post_block">
-                                        <div class="mini-post_img"><a href="{{ article.get_absolute_url }}"><img
-                                                src="{{ article.thumbnail.url }}" alt="blog image"></a></div>
-                                        <div class="mini-post_text"><a
-                                                href="{{ article.get_absolute_url }}">{{ article.title }}</a>
-                                            <h5>{{ article.publish_date }}</h5>
-                                        </div>
-                                    </div>
-                                {% endfor %}
                             </div>
                         </div>
-                        <div class="blog-sidebar_tags">
-                            <div class="tags_top mini-tab-title underline">
-                                <h2 class="title">Teglər</h2>
-                            </div>
-
-                            <div class="tags_bottom">
-                                {% for tag in tags %}
-                                    <a class="tag-btn" href="{{ tag.get_absolute_url }}">{{ tag.name }}</a>
-
-                                {% endfor %}
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="filter-sidebar--background" style="display: none"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--
-    <div class="banner">
-        <div class="full-fluid">
-            <div class="banner-block">
-                <div class="row no-gutters">
-
-                    <div class="col-12 col-lg-3">
-                        <div class="banner-block_detail"
-                             style="background-image: url('{% static 'assets/images/homepage01/banner_1.png' %}')"><img
-                                src="{% static 'assets/images/homepage01/banner_img_1.png' %}" alt=""><a class="banner-btn normal-btn" href="shop_grid+list_3col.html">Shop
-                            now</a></div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="banner-block_detail"
-                             style="background-image: url('{% static 'assets/images/homepage01/banner_2.png' %}')"><img
-                                src="{% static 'assets/images/homepage01/banner_img_2.png' %}" alt=""><a class="banner-btn normal-btn" href="shop_grid+list_3col.html">Shop
-                            now</a></div>
-                    </div>
-                    <div class="col-12 col-lg-3">
-                        <div class="banner-block_detail"
-                             style="background-image: url('{% static 'assets/images/homepage01/banner_3.png' %}')"><img
-                                src="{% static 'assets/images/homepage01/banner_img_3.png' %}" alt=""><a class="banner-btn normal-btn" href="shop_grid+list_3col.html">Shop
-                            now</a></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    -->
-    <!-- End banner	-->
-    <!--
-    <div class="deal-of-week">
+        -->
+
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center order-1">
-                    <h1 class="title green-underline mx-auto">Deal Of The Week</h1>
-                </div>
-                <div class="col-10 col-md-6 col-lg-4 order-3 order-md-2 order-lg-2">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="featured-use text-md-right">
-                                <div class="featured-use_intro order-2 order-md-1">
-                                    <h5>Eat Healthier</h5>
-                                    <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
-                                </div>
-                                <div class="featured-use_icon text-md-right order-1 order-md-2 featured-use_icon-left">
-                                    <div class="icon-detail"><img src="{% static 'assets/images/homepage01/dow_icon_1.png' %}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="featured-use text-md-right">
-                                <div class="featured-use_intro order-2 order-md-1">
-                                    <h5>We Have Brands</h5>
-                                    <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
-                                </div>
-                                <div class="featured-use_icon text-md-right order-1 order-md-2 featured-use_icon-left">
-                                    <div class="icon-detail"><img src="{% static 'assets/images/homepage01/dow_icon_2.png' %}" alt="">
-                                    </div>
+            <div class="our-farmer">
+                <h1 class="title green-underline">We are farmer</h1>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="our-farmer-block our-farmer-block--1">
+                            <div class="farmer-img"><img src="{% static 'assets/images/pages/farmer_1.png' %}" alt="farmer"></div>
+                            <div class="farmer-contact_wrapper">
+                                <div class="farmer-contact">
+                                    <h2>Katie Harrison</h2>
+                                    <h5>BARBER</h5>
+                                    <div class="farmer-social"><a href=""><i class="fab fa-facebook-f"> </i></a><a
+                                            href=""><i class="fab fa-twitter"></i></a><a href=""><i
+                                            class="fab fa-invision"> </i></a><a href=""><i
+                                            class="fab fa-pinterest-p"></i></a></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-4 order-2 order-md-4 order-lg-3 text-center">
-                    <div class="week-product_img"><img class="img-fluid" src="{% static 'assets/images/homepage01/deal-of-week.png' %}"
-                                                       alt="">
-                        <p>Only<br><span>$19.00</span></p>
-                    </div>
-                </div>
-                <div class="col-10 col-md-6 col-lg-4 order-4 order-md-3 order-lg-4">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="featured-use">
-                                <div class="featured-use_intro order-2">
-                                    <h5>Fresh And Clean Products</h5>
-                                    <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
-                                </div>
-                                <div class="featured-use_icon order-1 ml-0">
-                                    <div class="icon-detail"><img src="{% static 'assets/images/homepage01/dow_icon_3.png' %}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="featured-use">
-                                <div class="featured-use_intro order-2">
-                                    <h5>Modern Process</h5>
-                                    <p>Modi tempora incidunt ut labore dolore magnam aliquam</p>
-                                </div>
-                                <div class="featured-use_icon order-1 ml-0">
-                                    <div class="icon-detail"><img src="{% static 'assets/images/homepage01/dow_icon_4.png' %}" alt="">
-                                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="our-farmer-block our-farmer-block--2">
+                            <div class="farmer-img"><img src="{% static 'assets/images/pages/farmer_2.png' %}" alt="farmer"></div>
+                            <div class="farmer-contact_wrapper">
+                                <div class="farmer-contact">
+                                    <h2>Katie Harrison</h2>
+                                    <h5>BARBER</h5>
+                                    <div class="farmer-social"><a href=""><i class="fab fa-facebook-f"> </i></a><a
+                                            href=""><i class="fab fa-twitter"></i></a><a href=""><i
+                                            class="fab fa-invision"> </i></a><a href=""><i
+                                            class="fab fa-pinterest-p"></i></a></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 text-center order-5">
-                    <div class="d-flex justify-content-center" id="event-countdown"></div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="our-farmer-block our-farmer-block--3">
+                            <div class="farmer-img"><img src="{% static 'assets/images/pages/farmer_3.png' %}" alt="farmer"></div>
+                            <div class="farmer-contact_wrapper">
+                                <div class="farmer-contact">
+                                    <h2>Katie Harrison</h2>
+                                    <h5>BARBER</h5>
+                                    <div class="farmer-social"><a href=""><i class="fab fa-facebook-f"> </i></a><a
+                                            href=""><i class="fab fa-twitter"></i></a><a href=""><i
+                                            class="fab fa-invision"> </i></a><a href=""><i
+                                            class="fab fa-pinterest-p"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="our-farmer-block our-farmer-block--4">
+                            <div class="farmer-img"><img src="{% static 'assets/images/pages/farmer_1.png' %}" alt="farmer"></div>
+                            <div class="farmer-contact_wrapper">
+                                <div class="farmer-contact">
+                                    <h2>Katie Harrison</h2>
+                                    <h5>BARBER</h5>
+                                    <div class="farmer-social"><a href=""><i class="fab fa-facebook-f"> </i></a><a
+                                            href=""><i class="fab fa-twitter"></i></a><a href=""><i
+                                            class="fab fa-invision"> </i></a><a href=""><i
+                                            class="fab fa-pinterest-p"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    -->
-    <!-- End deak of the week-->
+    <!-- End about us-->
     <div class="partner">
         <div class="container">
             <div class="partner_block d-flex justify-content-between" data-slick="{&quot;slidesToShow&quot;: 6}">
@@ -493,11 +501,5 @@
 <script src="{% static 'assets/js/numscroller-1.0.js' %}"></script>
 <script src="{% static 'assets/js/vanilla-tilt.min.js' %}"></script>
 <script src="{% static 'assets/js/main.js' %}"></script>
-<script>
-    var sence = document.getElementById('img-block')
-    var parallaxInstance = new Parallax(sence, {
-        hoverOnly: true,
-    });
-</script>
 </body>
 </html>
